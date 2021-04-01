@@ -1,3 +1,4 @@
+<%@page import="org.springframework.web.bind.annotation.ModelAttribute"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -37,7 +38,7 @@
 				  <a id="logo" href="index.jsp"><img src="images/logo2.jpg" width="276" height="203" alt="Steak House" title="Steak House"></a>
 				  
 				  <ul id="navigation">
-				  <li><a href="reservation">REGISTER</a></li>
+				  <li><a href="logout">LOG OUT</a></li>
 				  <li><a href="contact">CONTACT US</a></li>
 				  </ul>
 		   </div>
@@ -58,7 +59,7 @@
 				                 Ordered Food Name
 				             </th>
 				             <th>
-				                  Food Quentity
+				                  Food Quantity
 				             </th>
 				             <th>
 				                  Food Price
@@ -105,8 +106,10 @@
 				           </tr>   
 				           
 				           <tr>
-				             <td colspan="5" align="center"> total Amount is :${total } </td>
+				             <td colspan="5" align="center"> Total Amount is :${total } </td>
 				           </tr>
+				    <%--        
+				         <input type="hidden" name="bill" value="${total } "> --%>
 				           
 				           <tr>
 				              <td colspan="5" align="center"><input type="submit" value="Conform Order"> </td>

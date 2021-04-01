@@ -1,17 +1,12 @@
 <!DOCTYPE html >
-<!---- Website template by freewebsitetemplates.com ---->
+
 <html>
 
 <head>
 	<title>Catering_system_HomePage</title>
 	<meta  charset=iso-8859-1" />
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
-	<!--[if IE 6]>
-		<link href="css/ie6.css" rel="stylesheet" type="text/css" />
-	<![endif]-->
-	<!--[if IE 7]>
-        <link href="css/ie7.css" rel="stylesheet" type="text/css" />  
-	<![endif]-->
+	
 </head>
 
 <body>

@@ -4,9 +4,6 @@ import java.util.List;
 
 import org.springframework.orm.hibernate4.HibernateTemplate;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.bean.CusBean;
 import com.bean.FoodAdmin;
@@ -14,8 +11,8 @@ import com.bean.FoodTable;
 
 public class AddDAO {
 	
-	HibernateTemplate ht;
-
+    HibernateTemplate ht;
+ 
 	public HibernateTemplate getHt() {
 		return ht;
 	}
@@ -51,8 +48,8 @@ public class AddDAO {
 	 
 	  @Transactional
 		public Long deleteFood(Long addid) {
-			FoodAdmin c = new FoodAdmin();
-			c.setF_id(addid);
+			FoodTable c = new FoodTable();
+			c.setFid(addid);
 			ht.delete(c);
 			return addid;
 		}

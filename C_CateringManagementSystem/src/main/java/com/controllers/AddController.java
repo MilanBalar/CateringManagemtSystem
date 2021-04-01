@@ -1,11 +1,8 @@
 package com.controllers;
 
-import java.awt.print.Book;
-import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,49 +25,38 @@ public class AddController {
 	AddDAO addDao;
 
 	@RequestMapping("/Delete/{addid}")
-	public String deletepage(@PathVariable Long addid, Model m) {
-		Long a = addDao.deleteData(addid);
-		if (a > 0) {
-			List<CusBean> list = addDao.AllData();
-			m.addAttribute("list", list);
-
-			return "adminCustomerDetail2";
-		} else {
-			return "notvalide";
-		}
+	public String deletepage(@PathVariable Long addid) {
+		addDao.deleteData(addid);
+		
+        return "redirect:/adminCustomerDetail";
+		
+	}
+	
+	@RequestMapping("/DeleteOrders/{fid}")
+	public String deleteOrder(@PathVariable Long fid) {
+		 addDao.deleteFood(fid);
+		
+        return "redirect:/AdminViewAllOrder";
+		
 	}
 	
 	
 	@RequestMapping("/AdminViewAllOrder")
-	public String AdminViewAllOrder(Model m) {
+	public String AdminViewAllOrder(Model m,HttpServletRequest request) {
 		
 		List<FoodTable> list =addDao.AdminViewAllOrder();
+		//String orderAddress=(String) request.getSession().getAttribute("orderAddress");
 		
 		
 		m.addAttribute("list",list);
+		//m.addAttribute("orderAddress", orderAddress);
 
 			return "/AdminViewAllOrder";
 		
 	}
 	
 
-	
-	@RequestMapping("/Delete/{fid}")
-	public String deletepageOf_food(@PathVariable Long fid, Model m) {
-		Long a = addDao.deleteFood(fid);
-		if (a > 0) {
-			List<FoodAdmin> list =addDao.AllfoodByDelete();
-		
-			m.addAttribute("list",list);
 
-			return "adminViewFood";
-		} else {
-			return "notvalide";
-		}
-	}
-	
-	
-	
 	@RequestMapping("/saveInsertFood")
 	public String saveInsertFood_page(@RequestParam("f_food") String f_food,@RequestParam("f_discription") String f_discription,@RequestParam("f_price") Long f_price,Model m)
 	{   
@@ -88,7 +74,7 @@ public class AddController {
 	
 	
 	
-	//insert food page
+	//insert food pageL̥
 	@RequestMapping("/AdminAddFood")
 	public String AdminAddFood_page()
 	{
@@ -96,11 +82,7 @@ public class AddController {
 		return "AdminAddFood";
 	}
 	
-	
-	
-	
-	
-	
+
 	//admin side customer details
 	
 	@RequestMapping("/adminCustomerDetail")
@@ -150,10 +132,6 @@ public class AddController {
 		return "validate";
 	}
 
-	@RequestMapping("/logout")
-	public String logout() {
-
-		return "index";
-	}
+	
 
 }

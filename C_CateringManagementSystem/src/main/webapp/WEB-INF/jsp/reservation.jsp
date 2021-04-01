@@ -19,7 +19,16 @@
      table-layout: fixed;
      width: 80%;  
     }
+   
+    
     </style>
+    
+    <script src= 
+    "https://smtpjs.com/v3/smtp.js"> 
+  </script> 
+  
+
+    
 </head>
 
 <body>
@@ -47,13 +56,8 @@
 			    <div class="content">
 				   <div class="body">
 				   
-				        <h2 align="center">Register Your Details</h2><br>
-						
-						
-						
-						
-				       
-					    <ul class="news">
+				       <u><h2 align="center">Register Your Details</h2><br></u>
+						 <ul class="news">
 							<form action="save" method="post">
 							    <table border="1" align="center" class="d">
 							       <tr>
@@ -62,9 +66,16 @@
 							       </tr>
 							       <tr>
 							          <td>Customer Email</td>
-							          <td><input type="email" name="cemail" required="required"></td>
+							          <td><input type="email" name="cemail"  required="required">
+							           
+							           </td>
 							       </tr>
-							       <tr>
+							          
+							          <tr>
+							          <td>City</td>
+							          <td><input type="text" name=ccity required="required"></td>
+							       </tr>
+                                   <tr>
 							          <td>Customer Contact</td>
 							          <td><input type="text" name="ccontact" required="required"></td>
 							       </tr>
@@ -76,10 +87,7 @@
 							          <td>Arrival Time</td>
 							          <td><input type="time" name="ctime" required="required"></td>
 							       </tr>
-							       <tr>
-							          <td>Customer City</td>
-							          <td><input type="text" name="ccity" required="required"></td>
-							       </tr>
+							      
 							       <tr>
 							          <td>Customer Password</td>
 							          <td><input type="password" name="cpass" required="required"></td>

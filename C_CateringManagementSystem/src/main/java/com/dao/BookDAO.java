@@ -7,7 +7,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.bean.BookingOrder;
 import com.bean.BookingTable;
-import com.bean.CusBean;
 import com.bean.FoodAdmin;
 import com.bean.FoodTable;
 
@@ -29,6 +28,14 @@ public class BookDAO
 	  
 	  public List<BookingTable> AdminBookingHistory(){
 			return ht.loadAll(BookingTable.class);
+		}
+	  
+	  @Transactional 
+		public Long deletBooking(Long fid) {
+		  BookingTable c = new BookingTable();
+			c.setBid(fid);
+			ht.delete(c);
+			return fid;
 		}
 
 	

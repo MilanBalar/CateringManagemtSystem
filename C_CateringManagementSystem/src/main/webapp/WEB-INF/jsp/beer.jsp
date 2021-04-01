@@ -6,12 +6,7 @@
 <title>Login Page</title>
 	<meta  charset=iso-8859-1" />
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
-	<!--[if IE 6]>
-		<link href="css/ie6.css" rel="stylesheet" type="text/css" />
-	<![endif]-->
-	<!--[if IE 7]>
-        <link href="css/ie7.css" rel="stylesheet" type="text/css" />  
-	<![endif]-->
+	
 	 <style>
 	   table.d {
      table-layout: fixed;

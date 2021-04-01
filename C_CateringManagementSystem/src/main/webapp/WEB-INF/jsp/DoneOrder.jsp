@@ -4,7 +4,7 @@
 <html>
 <head>
 <title>Login Page</title>
-	<meta  charset=iso-8859-1" />
+	<meta  charset=iso-8859-1" /L̥>
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
 	<!--[if IE 6]>
 		<link href="css/ie6.css" rel="stylesheet" type="text/css" />
@@ -27,7 +27,7 @@
 				  <a id="logo" href="index.jsp"><img src="images/logo2.jpg" width="276" height="203" alt="Steak House" title="Steak House"></a>
 				  
 				  <ul id="navigation">
-				  <li><a href="reservation">REGISTER</a></li>
+				  <li><a href="logout">LOG OUT</a></li>
 				  <li><a href="contact">CONTACT US</a></li>
 				  </ul>
 		   </div>

@@ -86,7 +86,7 @@
 					          <td>${c.bnumber_of_person}</td>
 					          <td>${c.session}</td>
 					          
-					          <td><a href="Delete/${c.bid }">Delete</a></td>
+					          <td><a href="DeleteBooking/${c.bid }">Delete</a></td>
 					          
 					          
 					              

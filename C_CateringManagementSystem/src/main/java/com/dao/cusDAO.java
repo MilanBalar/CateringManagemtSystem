@@ -1,26 +1,15 @@
 package com.dao;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.List;
 
-import javax.persistence.Query;
-import javax.sql.DataSource;
-
-import org.hibernate.cfg.Configuration;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate4.HibernateTemplate;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.bean.BookingOrder;
 import com.bean.CusBean;
 import com.bean.FoodTable;
 
 public class cusDAO {
-	HibernateTemplate ht;
+  HibernateTemplate ht;
 
 	public HibernateTemplate getHt() {
 		return ht;
@@ -54,7 +43,7 @@ public class cusDAO {
 	{
 		Boolean flag=false;
 		String sql="from CusBean where cemail=? and cpass=?";
-		List c=(List) ht.find(sql, email, pass);
+		List c=ht.find(sql, email, pass);
 		return c;
 		
 		//Email is and pass based data  store list 

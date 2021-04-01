@@ -58,7 +58,7 @@
 					
 					
 					
-					<form action="addData">
+					<form action="addData" method="post">
 					   <table border="" align="center">
 					      <tr>  
 					           <th>Customer Id</th>

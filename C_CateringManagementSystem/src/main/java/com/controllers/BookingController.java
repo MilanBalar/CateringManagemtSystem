@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,10 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.bean.BookingOrder;
 import com.bean.BookingTable;
-import com.bean.CusBean;
 import com.bean.FoodAdmin;
-import com.bean.FoodTable;
-import com.dao.AddDAO;
 import com.dao.BookDAO;
 
 @Controller
@@ -31,18 +27,10 @@ public class BookingController
 	
 	
 
-	@RequestMapping("/DeleteOrder/{fid}")
-	public String deletepage(@PathVariable Long fid, Model m) {
-		Long a = bookDao.deleteOrder(fid);
-		if (a > 0) {
-			List<FoodTable> list =bookDao.AllOrderData();
-		
-			m.addAttribute("list",list);
-
-			return "order1";
-		} else {
-			return "notvalide";
-		}
+	@RequestMapping("/DeleteBooking/{fid}")
+	public String deletepageBooking(@PathVariable Long fid, Model m) {
+		Long a = bookDao.deletBooking(fid);
+		return "redirect:/AdminBookingHistory";
 	}
 	
 	

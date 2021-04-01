@@ -29,7 +29,7 @@
 				  <a id="logo" href="index.jsp"><img src="images/logo2.jpg" width="276" height="203" alt="Steak House" title="Steak House"></a>
 				  
 				  <ul id="navigation">
-				  <li><a href="reservation">REGISTER</a></li>
+				  <li><a href="logout">LOG OUT</a></li>
 				  <li><a href="contact">CONTACT US</a></li>
 				  </ul>
 		   </div>
@@ -99,12 +99,21 @@
    
   
     </c:forEach>
+    
+       <br><br>
+		 <tr align="center">
+         	
+	       
+	       <td colspan="5"><input type="text" name="oderAddress" placeholder="Enter you Current Address...." required="required"></td>
+
+		</tr><br><br>
   
         <tr align="center">
          	
 					<td colspan="5"><input type="submit" value="Place Order"></td>
 
-		</tr>
+		</tr><br><br>
+		 
 
  </table></form>
  <br><br><br><br><br><br><br><br>
